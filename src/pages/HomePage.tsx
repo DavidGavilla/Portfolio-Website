@@ -7,7 +7,7 @@ import { useLanguage } from "../context/languageContext";
 import { homeTranslations } from "../translations/homeTranslations";
 
 const HomePage: React.FC = () => {
-    const { language, setLanguage } = useLanguage();
+    const { language } = useLanguage();
 
     const t = homeTranslations[language];
 
@@ -181,8 +181,8 @@ const HomePage: React.FC = () => {
             <section id="contact" className="contact-container">
                 <div className="section-heading">
                     <h2 className="skills-title">
-                        <span>{t.contactSection.titleFirst}</span>
-                        <strong>{t.contactSection.titleHighlight}</strong>
+                        <span className="ContactMe-text">{t.contactSection.titleFirst}</span>
+                        <strong className="ContactMe-text">{t.contactSection.titleHighlight}</strong>
                     </h2>
 
                     <p className="skills-description">

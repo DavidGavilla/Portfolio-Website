@@ -129,7 +129,7 @@ export const homeTranslations = {
 
                 emailValue: "davidgavilla@gmail.com",
                 locationValue: "Palma de Mallorca, Spain",
-                availabilityValue: "Open to freelance & opportunities",
+                availabilityValue: "Available for work & new opportunities",
             },
 },
     },
@@ -264,7 +264,7 @@ export const homeTranslations = {
 
                 emailValue: "davidgavilla@gmail.com",
                 locationValue: "Palma de Mallorca, España",
-                availabilityValue: "Disponible para proyectos y oportunidades",
+                availabilityValue: "Actualmente disponible para nuevas oportunidades laborales",
             },
         },
     },
