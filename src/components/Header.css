@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Geist Mono', monospace;
+    font-family: "Geist Mono", monospace;
 }
 
 .h-main-container {
@@ -14,13 +14,18 @@
     align-items: center;
     justify-content: space-between;
     background-color: #0a0c13;
-    height: 80px; 
+    height: 80px;
 }
 
 .h-name-container {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.h-tittle {
+    color: #e2e8f0;
+    margin-left: 70px;
 }
 
 .h-nav-container {
@@ -31,53 +36,92 @@
 }
 
 .h-nav-container-button {
-    color: #E2E8F0;
+    color: #e2e8f0;
     margin-right: 10px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding: 12px 20px;
     font-size: large;
-    /* This makes the button a positioning container for the underline effect */
-    position: relative; 
+    position: relative;
     transition: color 0.3s ease;
 }
 
-/* Base state for the gradient underline element */
 .h-nav-container-button::after {
-    content: '';
+    content: "";
     position: absolute;
-    bottom: 8px; /* Controls how close it is to the text */
+    bottom: 8px;
     left: 50%;
     transform: translateX(-50%) scaleX(0);
-    width: 8px; /* Small width to start as a circle-like dash */
+    width: 8px;
     height: 4px;
-    border-radius: 50%; /* Makes it a circle */
+    border-radius: 50%;
     background: radial-gradient(circle, #f87171 0%, #b91c1c 100%);
     opacity: 0.5;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 8px rgba(220, 38, 38, 0.6); /* Soft red glow */
+    box-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
 }
 
-/* Hover state: Expands the circle into a small line under the letters */
 .h-nav-container-button:hover::after {
-    transform: translateX(-50%) scaleX(4); /* Stretches the circle into an underline */
-    opacity: 1;
-    border-radius: 4px; /* Softens the edges */
-    width: 20px; /* Width of the line */
-    opacity: 0.8; /* Slightly more visible on hover */
+    transform: translateX(-50%) scaleX(4);
+    border-radius: 4px;
+    width: 20px;
+    opacity: 0.8;
 }
 
 .h-nav-container-button:hover {
-    color: #e78686; /* Softly tints the text red on hover */
+    color: #e78686;
 }
 
-.h-tittle {
-    color: #E2E8F0;
-    margin-left: 70px;
+/* Language Switch */
+.h-language-switch {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin-left: 14px;
+    margin-right: 18px;
+    padding: 5px;
+
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(226, 232, 240, 0.16);
 }
 
+.h-language-button {
+    min-width: 40px;
+    height: 32px;
 
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+
+    background: transparent;
+    color: #94a3b8;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.h-language-button:hover {
+    color: #f8fafc;
+    transform: translateY(-1px);
+}
+
+.h-language-button.active {
+    background: #ee1c1c;
+    color: white;
+    box-shadow: 0 8px 20px rgba(238, 28, 28, 0.3);
+}
+
+/* Theme Toggle */
 .h-theme-toggle {
     background: transparent;
     border: none;
@@ -88,10 +132,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+    transition:
+        transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        background-color 0.3s ease;
 }
 
-/* Red glow and tilt effect on hover */
 .h-theme-toggle:hover {
     background-color: rgba(220, 38, 38, 0.12);
     box-shadow: 0 0 12px rgba(220, 38, 38, 0.35);
@@ -101,11 +146,10 @@
 .h-theme-icon {
     width: 24px;
     height: 24px;
-    color: #E2E8F0;
+    color: #e2e8f0;
     transition: color 0.3s ease;
 }
 
-/* Tint the moon icon soft red on hover */
 .h-theme-toggle:hover .h-theme-icon {
     color: #f87171;
 }
