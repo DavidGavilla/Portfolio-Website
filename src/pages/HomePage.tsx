@@ -5,6 +5,7 @@ import SonEspasesBotHub from "../media/SonEspasesBotHub.png";
 import "./HomePage.css";
 import { useLanguage } from "../context/languageContext";
 import { homeTranslations } from "../translations/homeTranslations";
+import resumePDF from "../media/Developer_Resume.pdf";
 
 const HomePage: React.FC = () => {
     const { language } = useLanguage();
@@ -166,7 +167,7 @@ const HomePage: React.FC = () => {
                         </p>
 
                         <a
-                            href="/Developer_Resume.pdf"
+                            href={resumePDF}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="resume-button"
